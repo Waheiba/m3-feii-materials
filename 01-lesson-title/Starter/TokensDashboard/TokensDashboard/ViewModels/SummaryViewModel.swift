@@ -57,6 +57,12 @@ struct SummaryViewModel {
         destination: .ticketToMerge
       ))
     }
+    let insightsVM = UsageInsightsViewModel()
+    built.append(Insight(
+      headline: "AI Usage Insights",
+      detail: insightsVM.summaryRowDetail,
+      destination: .usageInsights
+    ))
     insights = built
   }
 }
