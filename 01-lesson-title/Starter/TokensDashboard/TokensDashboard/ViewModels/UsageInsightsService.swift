@@ -50,11 +50,12 @@ struct UsageInsightsService {
     private func modelConcentrationInsight() -> UsageInsight? {
         let totalSpend = costStore.monthToDateSpend
         guard totalSpend > 0,
-              let topModel = costStore.modelCosts.max(by: { $0.cost < $1.cost })
+              let topModel = costStore.modelCosts.max(by: { $0.cost < $1.cost }),
+              topModel.cost > 0
         else { return nil }
 
         let share = topModel.cost / totalSpend
-        guard share > 0.40 else { return nil }
+        guard share > 0.40, share <= 1.0 else { return nil }
 
         return UsageInsight(
             category: .modelConcentration,
