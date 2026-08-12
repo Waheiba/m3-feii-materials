@@ -114,7 +114,7 @@ struct UsageInsightsService {
             title: "Shorter Cycle Times in High-Usage Cohort",
             metric: KPIFormat.percent(improvement),
             explanation: "The heavy-AI-usage cohort's average ticket-to-merge time has fallen \(KPIFormat.percent(improvement)) over the tracked period, from \(firstFormatted) days to \(latestFormatted) days. This pattern is consistent with process improvements observed alongside increased tooling adoption.",
-            nextStep: "Investigate whether workflow changes, automation, or team capacity — rather than AI tooling alone — correlate with the shorter cycle times, and document the contributing factors.",
+            nextStep: "Investigate which factors — workflow changes, automation, team capacity, or AI tool adoption — are associated with the shorter cycle times, and document the contributing factors.",
             caveat: "Correlation between AI tool usage and cycle-time improvement does not establish causation. Other variables such as ticket scope, team experience, and sprint structure may be significant contributors."
         )
     }
@@ -145,7 +145,7 @@ struct UsageInsightsService {
             title: "High Token Use Without Proportional Output",
             metric: "\(matchingCount) of \(totalCount) contributors",
             explanation: "\(matchingCount) contributor\(matchingCount == 1 ? "" : "s") (\(KPIFormat.percent(share)) of the team) consumed above-median tokens this month while merging below-median pull requests. This pattern may indicate inefficient prompting strategies, work blocked on review, or tasks that do not produce mergeable artefacts.",
-            nextStep: "Review the nature of work undertaken by contributors who fit this pattern. Consider short pairing sessions or prompting-strategy workshops if inefficiency is confirmed.",
+            nextStep: "Review the mix of task types behind this pattern — long-running design work and review-blocked tasks can legitimately show this shape. If a team-wide prompting or workflow gap turns out to be the cause, address it at the process level rather than individually.",
             caveat: "Merged PR count is a coarse productivity proxy. Contributors working on long-running tasks, architecture, or code review may legitimately show high token use with fewer merges in a single month."
         )
     }
