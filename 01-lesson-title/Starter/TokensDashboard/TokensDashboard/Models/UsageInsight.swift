@@ -10,6 +10,7 @@ enum InsightCategory: String {
     case deliveryTrend      = "Delivery Trend"
     case workflowPattern    = "Workflow Pattern"
     case dataQuality        = "Data Quality"
+    case noSignal           = "No Signal"
 }
 
 /// Informal urgency label shown on each card.

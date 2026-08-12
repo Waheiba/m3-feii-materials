@@ -27,9 +27,16 @@ struct UsageInsightsViewModel {
 
         self.subtitle = "\(monthYear) · Team-level review signals"
 
-        let count = generatedInsights.count
-        let signalWord = count == 1 ? "signal" : "signals"
-        self.summaryRowDetail = "\(count) team-level review \(signalWord) found for \(monthYear). Review model concentration, token investment, and delivery trends before changing team guidance."
+        let actionableCount = generatedInsights
+            .filter { $0.category != .dataQuality && $0.category != .noSignal }
+            .count
+
+        if actionableCount == 0 {
+            self.summaryRowDetail = "No team-level review signals were flagged for \(monthYear). Open AI Usage Insights for details."
+        } else {
+            let signalWord = actionableCount == 1 ? "signal" : "signals"
+            self.summaryRowDetail = "\(actionableCount) team-level review \(signalWord) found for \(monthYear). Review model concentration, token investment, and delivery trends before changing team guidance."
+        }
     }
 
     // MARK: - Helpers

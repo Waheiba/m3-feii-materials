@@ -41,6 +41,10 @@ struct UsageInsightsService {
         if let insight = deliveryTrendInsight()      { insights.append(insight) }
         if let insight = workflowPatternInsight()    { insights.append(insight) }
 
+        if insights.isEmpty {
+            return [noSignalInsight()]
+        }
+
         return insights
     }
 
@@ -161,6 +165,22 @@ struct UsageInsightsService {
             explanation: "One or more data sources returned no records. Insights require cost, outcome, and cycle-time data to be present. Analysis has been skipped to avoid misleading results.",
             nextStep: "Verify that all three data stores are populated and that the dashboard is connected to the correct data sources.",
             caveat: "This message disappears automatically once all three stores contain at least one record."
+        )
+    }
+
+    // MARK: - Rule 6: No Signal
+
+    /// Shown when all data sources have enough records, but none of the
+    /// deterministic rules crossed their thresholds this period.
+    private func noSignalInsight() -> UsageInsight {
+        UsageInsight(
+            category: .noSignal,
+            severity: .informational,
+            title: "No Notable Signals This Period",
+            metric: "0 signals",
+            explanation: "Model concentration, cost growth, delivery trend, and workflow-pattern checks all stayed within their configured thresholds this period.",
+            nextStep: "No action needed. Continue reviewing this screen each month.",
+            caveat: "Thresholds are calibrated to reduce noise, not to catch every case. Absence of a signal is not a guarantee of ideal usage."
         )
     }
 
