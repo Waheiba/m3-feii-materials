@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2795E4023052082600E83DF5 /* reviewed-feature-plan.md in Resources */ = {isa = PBXBuildFile; fileRef = 2795E4013052082600E83DF5 /* reviewed-feature-plan.md */; };
-		27B6C72730557DD3000CCAB5 /* ReportedBugs.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C72630557DC8000CCAB5 /* ReportedBugs.md */; };
+		27B6C75D305583D7000CCAB5 /* dynamic-type-accessibility-review.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C75C305583D7000CCAB5 /* dynamic-type-accessibility-review.md */; };
+		27B6C75F3055848F000CCAB5 /* accessibility-voiceover-audit.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C75E3055848F000CCAB5 /* accessibility-voiceover-audit.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +26,8 @@
 		000000000000000000000120 /* TokensDashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokensDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2795E4013052082600E83DF5 /* reviewed-feature-plan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "reviewed-feature-plan.md"; sourceTree = "<group>"; };
 		2795E40730520C9D00E83DF5 /* TokensDashboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TokensDashboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B6C72630557DC8000CCAB5 /* ReportedBugs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReportedBugs.md; sourceTree = "<group>"; };
+		27B6C75C305583D7000CCAB5 /* dynamic-type-accessibility-review.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "dynamic-type-accessibility-review.md"; sourceTree = "<group>"; };
+		27B6C75E3055848F000CCAB5 /* accessibility-voiceover-audit.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "accessibility-voiceover-audit.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -58,10 +60,11 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				27B6C72630557DC8000CCAB5 /* ReportedBugs.md */,
 				2795E4013052082600E83DF5 /* reviewed-feature-plan.md */,
 				000000000000000000000010 /* TokensDashboard */,
 				2795E40830520C9D00E83DF5 /* TokensDashboardTests */,
+				27B6C75C305583D7000CCAB5 /* dynamic-type-accessibility-review.md */,
+				27B6C75E3055848F000CCAB5 /* accessibility-voiceover-audit.md */,
 				000000000000000000000020 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,7 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			files = (
 				2795E4023052082600E83DF5 /* reviewed-feature-plan.md in Resources */,
-				27B6C72730557DD3000CCAB5 /* ReportedBugs.md in Resources */,
+				27B6C75D305583D7000CCAB5 /* dynamic-type-accessibility-review.md in Resources */,
+				27B6C75F3055848F000CCAB5 /* accessibility-voiceover-audit.md in Resources */,
 			);
 		};
 		2795E40530520C9D00E83DF5 /* Resources */ = {
