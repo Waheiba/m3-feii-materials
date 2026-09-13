@@ -57,6 +57,15 @@ struct SummaryViewModel {
         destination: .ticketToMerge
       ))
     }
+
+    // 4. AI Usage Insights
+    built.append(Insight(
+      headline: "AI Usage Insights",
+      detail: "Team-level review signals available for May 2026. Review model concentration, token investment, and delivery trends before changing team guidance.",
+      destination: .usageInsights
+    ))
+
     insights = built
   }
 }
+
